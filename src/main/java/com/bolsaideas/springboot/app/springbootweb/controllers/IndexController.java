@@ -1,5 +1,8 @@
 package com.bolsaideas.springboot.app.springbootweb.controllers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,9 +25,17 @@ public class IndexController {
         User user = new User();
         user.setName("John");
         user.setSurname("Doe");
+        user.setEmail("john@doe.com");
         model.addAttribute("title", "El nombre del usuario es "+user.getName());
         model.addAttribute("user", user);
-        model.addAttribute("surname", user);
         return "profile";
+    }
+
+    @GetMapping("/user-list")
+    public String list(Model model){
+        List<User> users = new ArrayList<>();
+        model.addAttribute("title", "User list");
+        model.addAttribute("users", users);
+        return "user-list";
     }
 }
