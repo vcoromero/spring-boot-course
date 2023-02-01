@@ -6,6 +6,23 @@
 </head>
 <body>
 <h1 th:text="${title}"></h1>
-<span th:if="${users.size() == 0}">No hay usuarios en la lista</span>
+<span th:if="${users.isEmpty()}">No hay usuarios en la lista</span>
+
+<table th:if="${!users.isEmpty()}">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="user: ${users}">
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.surname}"></td>
+            <td th:text="${user.email}"></td>
+        </tr>
+    </tbody>
+</table>
 </body>
 </html>
