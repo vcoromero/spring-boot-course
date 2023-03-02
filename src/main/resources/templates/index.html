@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
     <meta charset="UTF-8" />
     <title th:text="${title}"></title>
 </head>
 <body>
-<h1 th:text="${title}"></h1>
+<h1 class="red-color" th:text="${title}"></h1>
+<h2 class="blue-color" >Decorando con estilos css</h2>
+<img th:src="@{/images/meme.jpg}" alt="">
 </body>
 </html>
