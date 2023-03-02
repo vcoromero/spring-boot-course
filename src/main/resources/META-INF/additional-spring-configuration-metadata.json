@@ -1,0 +1,22 @@
+{"properties": [
+  {
+    "name": "text.indexController.index.title",
+    "type": "java.lang.String",
+    "description": "A description for 'text.indexController.index.title'"
+  },
+  {
+    "name": "text.indexController.profile.title",
+    "type": "java.lang.String",
+    "description": "A description for 'text.indexController.profile.title'"
+  },
+  {
+    "name": "text.indexController.list.title",
+    "type": "java.lang.String",
+    "description": "A description for 'text.indexController.list.title'"
+  },
+  {
+    "name": "text.indexController.profile.title",
+    "type": "java.lang.String",
+    "description": "A description for 'text.indexController.profile.title'"
+  }
+]}
